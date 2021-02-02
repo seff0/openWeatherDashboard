@@ -26,7 +26,7 @@
               <input
                 class="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Enter a city name"
                 aria-label="Search"
                 id="user-search"
               />
@@ -38,24 +38,20 @@
                 Search
               </button>
             </form>
-            <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
-              <li class="list-group-item">Porta ac consectetur ac</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
+            <ul class="list-group"></ul>
           </div>
         </div>
       </div>
       <div class="col-7">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Temperature:</p>
-            <p class="card-text">Humidity:</p>
-            <p class="card-text">Wind speed:</p>
-            <p class="card-text">UV Index:</p>
+            <h2 class="card-title city">City</h2>
+            <h2 class="card-title currentDate"></h2>
+            <h2 class="card-title icon"></h2>
+            <p class="card-text temp">Temperature (F):</p>
+            <p class="card-text humidity">Humidity:</p>
+            <p class="card-text windSpd">Wind speed:</p>
+            <p class="card-text UVI">UV Index:</p>
           </div>
         </div>
         <div class="row">
@@ -64,13 +60,51 @@
         <div class="row row-cols-5">
           <div class="col">
             <div class="card text-white bg-primary mb-3" style="width: 15rem">
-              <div class="card-header">Header</div>
+              <div class="card-header 0forecastDate">date</div>
               <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <p class="card-text 0forecastIcon">icon</p>
+                <p class="card-text 0forecastTemp">temp hi</p>
+                <p class="card-text 0forecastHumidity">humidity</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-primary mb-3" style="width: 15rem">
+              <div class="card-header 1forecastDate">date</div>
+              <div class="card-body">
+                <p class="card-text 1forecastIcon">icon</p>
+                <p class="card-text 1forecastTemp">temp hi</p>
+                <p class="card-text 1forecastHumidity">humidity</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-primary mb-3" style="width: 15rem">
+              <div class="card-header 2forecastDate">date</div>
+              <div class="card-body">
+                <p class="card-text 2forecastIcon">icon</p>
+                <p class="card-text 2forecastTemp">temp hi</p>
+                <p class="card-text 2forecastHumidity">humidity</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-primary mb-3" style="width: 15rem">
+              <div class="card-header 3forecastDate">date</div>
+              <div class="card-body">
+                <p class="card-text 3forecastIcon">icon</p>
+                <p class="card-text 3forecastTemp">temp hi</p>
+                <p class="card-text 3forecastHumidity">humidity</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-primary mb-3" style="width: 15rem">
+              <div class="card-header 4forecastDate">date</div>
+              <div class="card-body">
+                <p class="card-text 4forecastIcon">icon</p>
+                <p class="card-text 4forecastTemp">temp hi</p>
+                <p class="card-text 4forecastHumidity">humidity</p>
               </div>
             </div>
           </div>
