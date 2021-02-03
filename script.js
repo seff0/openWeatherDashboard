@@ -18,6 +18,9 @@ $(document).ready(function () {
       var city = response.name;
       $(".city").text(city);
 
+      var cityIcon = response.weather[0].icon;
+      $(".cityIcon").attr("src", "Assets/icons/" + cityIcon + ".png");
+
       var tempF = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(1);
       $(".temp").html("Temperature (F): " + tempF);
 
@@ -59,7 +62,11 @@ $(document).ready(function () {
           $("." + [i] + "forecastHumidity").html(
             forecast[i].humidity + "% humidity"
           );
-          //daily.weather[0].icon
+          var selectedIcon = forecast[i].weather[0].icon;
+          $("." + [i] + "forecastIcon").attr(
+            "src",
+            "Assets/icons/" + selectedIcon + ".png"
+          );
         }
       });
     });
@@ -77,6 +84,7 @@ $(document).ready(function () {
 
     getWeather(city);
   });
+
   $(document).on("click", ".cityLi", function () {
     var city = $(this).text();
     getWeather(city);

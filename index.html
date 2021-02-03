@@ -15,96 +15,110 @@
   <body>
     <div class="row">
       <div class="jumbotron">
-        <h1 class="display-4">Weather Dashboard</h1>
+        <h1 class="display-4 text-center">Weather Dashboard</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-5">
-        <div class="card">
-          <div class="card-body">
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Enter a city name"
-                aria-label="Search"
-                id="user-search"
-              />
-              <button
-                class="btn btn-outline-success"
-                type="submit"
-                id="search-btn"
-              >
-                Search
-              </button>
-            </form>
-            <ul class="list-group"></ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <div class="card">
+            <div class="card-body">
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Enter a city name"
+                  aria-label="Search"
+                  id="user-search"
+                />
+                <button
+                  class="btn btn-outline-success"
+                  type="submit"
+                  id="search-btn"
+                >
+                  Search
+                </button>
+              </form>
+              <ul class="list-group"></ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-7">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title city">City</h2>
-            <h2 class="card-title currentDate"></h2>
-            <h2 class="card-title icon"></h2>
-            <p class="card-text temp">Temperature (F):</p>
-            <p class="card-text humidity">Humidity:</p>
-            <p class="card-text windSpd">Wind speed:</p>
-            <p class="card-text UVI">UV Index:</p>
-          </div>
-        </div>
-        <div class="row">
-          <h2>5-day forecast:</h2>
-        </div>
-        <div class="row row-cols-5">
-          <div class="col">
-            <div class="card text-white bg-primary mb-3" style="width: 15rem">
-              <div class="card-header 0forecastDate">date</div>
-              <div class="card-body">
-                <p class="card-text 0forecastIcon">icon</p>
-                <p class="card-text 0forecastTemp">temp hi</p>
-                <p class="card-text 0forecastHumidity">humidity</p>
-              </div>
+        <div class="col-7">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title city">City</h2>
+              <h2 class="card-title currentDate"></h2>
+              <h2 class="card-title">
+                <img class="cityIcon" src="Assets/icons/unknown.png" />
+              </h2>
+              <p class="card-text temp">Temperature (F):</p>
+              <p class="card-text humidity">Humidity:</p>
+              <p class="card-text windSpd">Wind speed:</p>
+              <p class="card-text UVI">UV Index:</p>
             </div>
           </div>
-          <div class="col">
-            <div class="card text-white bg-primary mb-3" style="width: 15rem">
-              <div class="card-header 1forecastDate">date</div>
-              <div class="card-body">
-                <p class="card-text 1forecastIcon">icon</p>
-                <p class="card-text 1forecastTemp">temp hi</p>
-                <p class="card-text 1forecastHumidity">humidity</p>
+          <div class="row">
+            <h2>5-day forecast:</h2>
+          </div>
+          <div class="row row-cols-5">
+            <div class="col">
+              <div class="card text-white bg-primary mb-3" style="width: 15rem">
+                <div class="card-header 0forecastDate">date</div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <img class="0forecastIcon" src="Assets/icons/unknown.png" />
+                  </div>
+                  <p class="card-text 0forecastTemp">temp hi</p>
+                  <p class="card-text 0forecastHumidity">humidity</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card text-white bg-primary mb-3" style="width: 15rem">
-              <div class="card-header 2forecastDate">date</div>
-              <div class="card-body">
-                <p class="card-text 2forecastIcon">icon</p>
-                <p class="card-text 2forecastTemp">temp hi</p>
-                <p class="card-text 2forecastHumidity">humidity</p>
+            <div class="col">
+              <div class="card text-white bg-primary mb-3" style="width: 15rem">
+                <div class="card-header 1forecastDate">date</div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <img class="1forecastIcon" src="Assets/icons/unknown.png" />
+                  </div>
+                  <p class="card-text 1forecastTemp">temp hi</p>
+                  <p class="card-text 1forecastHumidity">humidity</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card text-white bg-primary mb-3" style="width: 15rem">
-              <div class="card-header 3forecastDate">date</div>
-              <div class="card-body">
-                <p class="card-text 3forecastIcon">icon</p>
-                <p class="card-text 3forecastTemp">temp hi</p>
-                <p class="card-text 3forecastHumidity">humidity</p>
+            <div class="col">
+              <div class="card text-white bg-primary mb-3" style="width: 15rem">
+                <div class="card-header 2forecastDate">date</div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <img class="2forecastIcon" src="Assets/icons/unknown.png" />
+                  </div>
+                  <p class="card-text 2forecastTemp">temp hi</p>
+                  <p class="card-text 2forecastHumidity">humidity</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card text-white bg-primary mb-3" style="width: 15rem">
-              <div class="card-header 4forecastDate">date</div>
-              <div class="card-body">
-                <p class="card-text 4forecastIcon">icon</p>
-                <p class="card-text 4forecastTemp">temp hi</p>
-                <p class="card-text 4forecastHumidity">humidity</p>
+            <div class="col">
+              <div class="card text-white bg-primary mb-3" style="width: 15rem">
+                <div class="card-header 3forecastDate">date</div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <img class="3forecastIcon" src="Assets/icons/unknown.png" />
+                  </div>
+                  <p class="card-text 3forecastTemp">temp hi</p>
+                  <p class="card-text 3forecastHumidity">humidity</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-white bg-primary mb-3" style="width: 15rem">
+                <div class="card-header 4forecastDate">date</div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <img class="4forecastIcon" src="Assets/icons/unknown.png" />
+                  </div>
+                  <p class="card-text 4forecastTemp">temp hi</p>
+                  <p class="card-text 4forecastHumidity">humidity</p>
+                </div>
               </div>
             </div>
           </div>
