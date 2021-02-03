@@ -15,6 +15,7 @@ $(document).ready(function () {
       url: query1URL,
       method: "GET",
     }).then(function (response) {
+      console.log(response);
       var city = response.name;
       $(".city").text(city);
 
@@ -43,11 +44,21 @@ $(document).ready(function () {
         url: query2URL,
         method: "GET",
       }).then(function (response2) {
+        console.log(response2);
         let unix_timestamp = response2.current.dt;
         var date = new Date(unix_timestamp * 1000).toLocaleDateString("en-US");
         $(".currentDate").html(date);
 
-        $(".UVI").html("UV Index: " + response2.current.uvi);
+        var indexNum = parseInt(response2.current.uvi);
+        console.log(indexNum);
+        if (indexNum > 7) {
+          $(".UVI").addClass("btn-danger");
+        } else if (indexNum > 2) {
+          $(".UVI").addClass("btn-warning");
+        } else {
+          $(".UVI").addClass("btn-success");
+        }
+        $(".UVI").html("UV Index: " + indexNum);
 
         var forecast = response2.daily;
 
