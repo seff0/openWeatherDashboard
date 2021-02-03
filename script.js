@@ -72,16 +72,40 @@ $(document).ready(function () {
     });
   }
 
+  function load() {
+    var citiesStored = JSON.parse(localStorage.getItem("cities"));
+    if (citiesStored) {
+      $.each(citiesStored, function (i) {
+        var city = citiesStored[i];
+        var newLi = $("<li>");
+        newLi.addClass("list-group-item cityLi");
+        newLi.text(city);
+        $(".list-group").prepend(newLi);
+      });
+    }
+  }
+
+  function store(city) {
+    var citiesStored = JSON.parse(localStorage.getItem("cities"));
+    if (!citiesStored) {
+      citiesStored = [];
+    }
+    if (citiesStored.includes(city) === false) {
+      citiesStored.push(city);
+    }
+    localStorage.setItem("cities", JSON.stringify(citiesStored));
+  }
+
   $("#search-btn").on("click", function (event) {
     event.preventDefault();
 
     var city = $("#user-search").val();
-
     var newLi = $("<li>");
     newLi.addClass("list-group-item cityLi");
     newLi.text(city);
     $(".list-group").prepend(newLi);
 
+    store(city);
     getWeather(city);
   });
 
@@ -89,4 +113,7 @@ $(document).ready(function () {
     var city = $(this).text();
     getWeather(city);
   });
+
+  load();
+  getWeather($(".cityLi").first()[0].innerHTML);
 });
